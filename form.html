@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LungYa Templace</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
+	<link rel="stylesheet" href="assets/vendor/bootstrap-select/bootstrap-select.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="css/style-custom.css">
+</head>
+<body class="d-flex flex-column h-100">
+	<nav class="navbar navbar-expand-lg bg-primary fixed-top" data-bs-theme="dark">
+		<div class="container-lg">
+			<a class="navbar-brand" href="index.html"><i class="bi bi-bootstrap fs-3"></i> SCT-TEAM</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse float-end" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="about.html">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="services.html">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Contact</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Pages
+						</a>
+						<ul class="dropdown-menu bg-primary">
+							<li><a class="dropdown-item" href="sign-in.html">Sign-in</a></li>
+							<li><a class="dropdown-item" href="sign-up.html">Sign-up</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="form.html">Form</a></li>
+							<li><a class="dropdown-item" href="datatable.html">DataTables</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<main class="pt-5">
+
+		<section>
+			<div class="container">
+				<div class="pt-5 pb-2" data-aos="fade-left">
+					<h2 class="pb-2 border-bottom title">Examples Form</h2>
+				</div>
+				<div>
+					<input type="color" id="theme_color" oninput="var rgb=hexToRgb(this.value);rgbOutput.innerHTML=rgb;setColorTheme(rgb);">
+					<span id="rgbOutput">RGB value will be displayed here</span>
+				</div>
+				<div class="row g-3">
+					<div class="col-lg-6" data-aos="zoom-in">
+						<div class="border border p-3">
+							<div class="border-bottom mb-3">
+								<h4>Default form</h4>
+							</div>
+							<form class="row g-3">
+								<div class="col-md-6">
+									<label for="inputEmail4" class="form-label">Email</label>
+									<input type="email" class="form-control" id="inputEmail4">
+								</div>
+								<div class="col-md-6">
+									<label for="inputPassword4" class="form-label">Password</label>
+									<input type="password" class="form-control" id="inputPassword4">
+								</div>
+								<div class="col-12">
+									<label for="inputAddress" class="form-label">Address</label>
+									<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+								</div>
+								<div class="col-12">
+									<label for="inputAddress2" class="form-label">Address 2</label>
+									<input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+								</div>
+								<div class="col-md-6">
+									<label for="inputCity" class="form-label">City</label>
+									<input type="text" class="form-control" id="inputCity">
+								</div>
+								<div class="col-md-4">
+									<label for="inputState" class="form-label">State</label>
+									<select id="inputState" class="selectpicker" data-size="3">
+										<option selected>Choose...</option>
+										<option value="1">One</option>
+										<option value="2">Two</option>
+										<option value="3">Three</option>
+										<option value="4">Four</option>
+										<option value="5">Five</option>
+										<option value="6">Six</option>
+										<option value="7">Seven</option>
+										<option value="8">Eight</option>
+										<option value="9">Nine</option>
+									</select>
+								</div>
+								<div class="col-md-2">
+									<label for="inputZip" class="form-label">Zip</label>
+									<input type="text" class="form-control" id="inputZip">
+								</div>
+								<div class="col-12">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="gridCheck">
+										<label class="form-check-label" for="gridCheck">
+											Check me out
+										</label>
+									</div>
+								</div>
+								<div class="col-12">
+									<button type="submit" class="btn btn-primary">Submit</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="col-lg-6" data-aos="zoom-in">
+						<div class="border p-3">
+							<div class="border-bottom mb-3">
+								<h4>Horizontal form</h4>
+							</div>
+							<form>
+								<div class="row mb-3">
+									<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+									<div class="col-sm-10">
+										<input type="email" class="form-control" id="inputEmail3">
+									</div>
+								</div>
+								<div class="row mb-3">
+									<label for="inputPassword2" class="col-sm-2 col-form-label">Password</label>
+									<div class="col-sm-10">
+										<input type="password" class="form-control" id="inputPassword2">
+									</div>
+								</div>
+								<fieldset class="row mb-3">
+									<legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+									<div class="col-sm-10">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+											<label class="form-check-label" for="gridRadios1">
+												First radio
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+											<label class="form-check-label" for="gridRadios2">
+												Second radio
+											</label>
+										</div>
+										<div class="form-check disabled">
+											<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+											<label class="form-check-label" for="gridRadios3">
+												Third disabled radio
+											</label>
+										</div>
+									</div>
+								</fieldset>
+								<div class="row mb-3">
+									<div class="col-sm-10 offset-sm-2">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="gridCheck1">
+											<label class="form-check-label" for="gridCheck1">
+												Example checkbox
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="mb-5">
+									<label class="visually-hidden" for="SelectPref2">Preference</label>
+									<select class="selectpicker" id="SelectPref2">
+										<option selected>Choose...</option>
+										<option value="1">One</option>
+										<option value="2">Two</option>
+										<option value="3">Three</option>
+									</select>
+								</div>
+
+								<button type="submit" class="btn btn-primary">Submit</button>
+							</form>
+						</div>
+					</div>
+
+					<div class="col-lg-6" data-aos="zoom-in">
+						<div class="border border p-3">
+							<div class="border-bottom mb-3">
+								<h4>Floating labels</h4>
+							</div>
+							<form>
+								<div class="row">
+									<div class="col-md-6 mb-3">
+										<div class="form-floating">
+											<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+											<label for="floatingInput">Email address</label>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-floating">
+											<input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+											<label for="floatingPassword">Password</label>
+										</div>
+									</div>
+									<div class="col-md-12 mb-3">
+										<div class="form-floating">
+											<input type="text" class="form-control" id="floatinInputAddress1" placeholder="1234 Main St">
+											<label for="floatinInputAddress1" class="form-label">Address 1 (Normal floating)</label>
+										</div>
+									</div>
+									<div class="col-md-12 mb-3">
+										<div class="form-floating">
+											<label for="floatinInputAddress2" class="form-label">Address 2 (Always floating)</label>
+											<input type="text" class="form-control" id="floatinInputAddress1" placeholder="Apartment, studio, or floor">
+										</div>
+									</div>
+									<div class="col-md-12 mb-3">
+										<div class="form-floating">
+											<input type="text" class="form-control" id="floatinInputAddress3">
+											<label for="floatinInputAddress3" class="form-label">Address 3 (Always float because there is no placeholder)</label>
+										</div>
+									</div>
+									<div class="col-md-6 mb-3">
+										<div class="form-floating">
+											<input type="text" class="form-control" id="floatingInputCity" placeholder="City">
+											<label for="floatingInputCity" class="form-label">City</label>
+										</div>
+									</div>
+									<div class="col-md-4 mb-3">
+										<div class="form-floating">
+											<label for="inputState" class="form-label">State</label>
+											<select id="inputState" class="selectpicker" data-size="3">
+												<option selected>Choose...</option>
+												<option value="1">One</option>
+												<option value="2">Two</option>
+												<option value="3">Three</option>
+												<option value="4">Four</option>
+												<option value="5">Five</option>
+												<option value="6">Six</option>
+												<option value="7">Seven</option>
+												<option value="8">Eight</option>
+												<option value="9">Nine</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-2 mb-3">
+										<div class="form-floating">
+											<input type="text" class="form-control" id="inputZip" placeholder="Zip">
+											<label for="inputZip" class="form-label">Zip</label>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 mt-5">
+									<button type="submit" class="btn btn-primary">Submit</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="col-lg-6" data-aos="zoom-in">
+						<div class="border p-3">
+							<div class="border-bottom mb-3">
+								<h4>bootstrap-select</h4>
+							</div>
+							<form>
+
+								<div class="my-3">
+									<label for="inputPassword4" class="form-label">Select boxes with optgroups</label>
+									<select class="selectpicker">
+										<optgroup label="Picnic">
+											<option>Mustard</option>
+											<option>Ketchup</option>
+											<option>Relish</option>
+										</optgroup>
+										<optgroup label="Camping">
+											<option>Tent</option>
+											<option>Flashlight</option>
+											<option>Toilet Paper</option>
+										</optgroup>
+									</select>
+								</div>
+
+								<div class="my-3">
+									<label class="form-label">Multiple select boxes</label>
+									<select class="selectpicker btn-lg" multiple>
+										<option>Mustard</option>
+										<option>Ketchup</option>
+										<option>Relish</option>
+									</select>
+								</div>
+
+								<div class="my-3">
+									<label class="form-label">Live search</label>
+									<select class="selectpicker" data-live-search="true" title="Choose one of the following...">
+										<option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+										<option data-tokens="mustard">Burger, Shake and a Smile</option>
+										<option data-tokens="frosting">Sugar, Spice and all things nice</option>
+									</select>
+								</div>
+
+								<div class="my-3">
+									<label class="form-label">Styling Button classes</label>
+									<select class="selectpicker" data-style="btn-danger" data-live-search="true" multiple>
+										<option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+										<option data-tokens="mustard">Burger, Shake and a Smile</option>
+										<option data-tokens="frosting">Sugar, Spice and all things nice</option>
+									</select>
+								</div>
+
+							</form>
+							<div>
+								<a href="https://developer.snapappointments.com/bootstrap-select/examples/" target="_developer__bootstrap_select_">See more...</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6" data-aos="zoom-in">
+						<div class="border p-3">
+							<div class="border-bottom mb-3">
+								<h4>Inline forms</h4>
+							</div>
+							<form class="row row-cols-lg-auto g-3 align-items-center">
+								<div class="col-12">
+									<label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
+									<div class="input-group">
+										<div class="input-group-text">@</div>
+										<input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+									</div>
+								</div>
+							
+								<div class="col-12">
+									<label class="visually-hidden" for="inlineFormSelectPref3">Preference</label>
+									<select class="selectpicker" id="inlineFormSelectPref3">
+										<option selected>Choose...</option>
+										<option value="1">One</option>
+										<option value="2">Two</option>
+									</select>
+								</div>
+							
+								<div class="col-12">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="inlineFormCheck">
+										<label class="form-check-label" for="inlineFormCheck">
+											Remember me
+										</label>
+									</div>
+								</div>
+							
+								<div class="col-12">
+									<button type="submit" class="btn btn-primary">Submit</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="col-lg-6" data-aos="zoom-in">
+						<div class="border p-3">
+							<div class="border-bottom mb-3">
+								<h4>Switches</h4>
+							</div>
+							<form>
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+									<label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+								</div>
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+									<label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+								</div>
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+									<label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+								</div>
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+									<label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+								</div>
+								<hr>
+								<div class="toggle-switch">
+									<input type="checkbox" id="toggleSwitch1">
+									<label for="toggleSwitch1">Default toggle switch</label>
+								</div>
+								<div class="toggle-switch">
+									<input type="checkbox" id="toggleSwitch2" checked>
+									<label for="toggleSwitch2">Checked toggle switch</label>
+								</div>
+								<div class="toggle-switch">
+									<input type="checkbox" id="toggleSwitch3" disabled>
+									<label for="toggleSwitch3">Disabled toggle switch</label>
+								</div>
+								<div class="toggle-switch">
+									<input type="checkbox" id="toggleSwitch4" disabled checked>
+									<label for="toggleSwitch4">Disabled checked toggle switch</label>
+								</div>
+								<hr>
+								<div class="toggle-switch">
+									<input type="radio" id="redioToggleSwitch1" name="redioToggleSwitch" checked>
+									<label for="redioToggleSwitch1">Mobile</label>
+								</div>
+								<div class="toggle-switch">
+									<input type="radio" id="redioToggleSwitch2" name="redioToggleSwitch">
+									<label for="redioToggleSwitch2">Computer</label>
+								</div>
+								<div class="toggle-switch">
+									<input type="radio" id="redioToggleSwitch3" name="redioToggleSwitch" disabled>
+									<label for="redioToggleSwitch3">TV</label>
+								</div>
+								<div class="toggle-switch">
+									<input type="radio" id="redioToggleSwitch4" name="redioToggleSwitch">
+									<label for="redioToggleSwitch4">Radio</label>
+								</div>
+								
+							</form>
+						</div>
+					</div>
+
+					<!--
+					<div class="col-lg-6" data-aos="zoom-in">
+						<div class="border p-3">
+							<div class="border-bottom mb-3">
+								<h4>xxx</h4>
+							</div>
+							<form>
+
+							</form>
+						</div>
+					</div>
+					-->
+
+				</div>
+			</div>
+
+		</section>
+
+		<div style="height:200px;"></div>
+	</main>
+	
+	<footer class="footer mt-auto py-3">
+		<div class="container mt-5">
+			<div class="d-flex flex-wrap justify-content-between border-top py-3">
+				<div class="col-md-4 d-flex align-items-center">
+					<a href="#" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+						<i class="bi bi-bootstrap fs-3"></i>
+					</a>
+					<span class="mb-3 mb-md-0 text-body-secondary">© 2023 Company, Inc</span>
+				</div>
+		
+				<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+					<li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-twitter fs-3"></i></a></li>
+					<li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-instagram fs-3"></i></a></li>
+					<li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-facebook fs-3"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+	<a href="javascript:" class="back-to-top d-flex align-items-center justify-content-center bg-primary text-white"><i class="bi bi-arrow-up-short fs-3"></i></a>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/parallax/parallax.js"></script>
+	<script src="assets/vendor/bootstrap-select/bootstrap-select-5.js"></script>
+	<script src="assets/js/script.js"></script>
+	<script src="js/script-custom.js"></script>
+	<script>
+		theme_color.value=rgbToHex(getColorTheme());
+		rgbOutput.innerHTML=getColorTheme();
+	</script>
+</body>
+</html>
